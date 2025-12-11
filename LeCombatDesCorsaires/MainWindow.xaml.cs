@@ -19,11 +19,20 @@ namespace LeCombatDesCorsaires
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
+            AfficheDemarrage();
         }
+        private void AfficheDemarrage()
+        {
+            // crée et charge l'écran de démarrage
+            UCDisposition uc = new UCDisposition();
 
+           
+        }
 
     }
 }

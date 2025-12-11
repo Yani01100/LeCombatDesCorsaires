@@ -8,6 +8,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Image Source="/Images/Ecran Acceuil.jpg" Stretch="Fill"/>
-        <Button x:Name="ButDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF775151" FontSize="25"/>
+        <Button x:Name="ButDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF633E3E" FontSize="36" Height="89" Width="250" Foreground="#FFF3CACA" FontFamily="Old English Text MT"/>
     </Grid>
 </UserControl>
