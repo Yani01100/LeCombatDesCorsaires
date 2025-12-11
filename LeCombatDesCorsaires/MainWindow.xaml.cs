@@ -29,10 +29,24 @@ namespace LeCombatDesCorsaires
         private void AfficheDemarrage()
         {
             // crée et charge l'écran de démarrage
-            UCDisposition uc = new UCDisposition();
+            UCDemarrage uc = new UCDemarrage();
 
-           
+            ZoneJeu.Content = uc;
+            uc.ButDemarrer.Click += AfficheUCMonde;
+
         }
 
+        private void AfficheUCMonde(object sender, RoutedEventArgs e)
+        {
+            UCMonde uc2 = new UCMonde();
+
+            ZoneJeu.Content = uc2;
+            uc2.butConfirmeChoix.Click += AfficheUCDisposition;
+        }
+
+        private void AfficheUCDisposition(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
