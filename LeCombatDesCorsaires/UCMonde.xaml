@@ -8,8 +8,20 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Image Source="/Images/Ecran Acceuil.jpg" Stretch="Fill"/>
-        <RadioButton x:Name="rbOnePiece" Content="RadioButton" HorizontalAlignment="Left" Margin="149,355,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="569,339,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbOnePiece" Margin="81,173,469,95" >
+            <RadioButton.Content>
+                <Image Source="/Images/rbOnePiece.jpg" Width="240" Height="174"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbCaraïbe" Margin="514,173,36,95" >
+            <RadioButton.Content>
+                <Image Source="/Images/rbCaraïbe.jpg" Width="260" Height="182"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <Label Content="One Piece" HorizontalAlignment="Left" Margin="101,164,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="-0.349,0.808" FontWeight="Bold"/>
+        <Label Content="Caraïbe" HorizontalAlignment="Left" Margin="523,187,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="butConfirmeChoix" Content="Confimer votre choix" HorizontalAlignment="Center" Margin="0,376,0,0" VerticalAlignment="Top" Click="Button_Click" Background="White" FontSize="22" FontFamily="Old English Text MT" Height="44" Width="266"/>
+
 
     </Grid>
 </UserControl>
