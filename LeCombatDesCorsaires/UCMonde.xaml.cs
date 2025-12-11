@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,18 +16,13 @@ using System.Windows.Shapes;
 namespace LeCombatDesCorsaires
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour UCMonde.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UCMonde : UserControl
     {
-        public MainWindow()
+        public UCMonde()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
