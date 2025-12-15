@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace LeCombatDesCorsaires
 {
     /// <summary>
-    /// Logique d'interaction pour UCDemarrage.xaml
+    /// Logique d'interaction pour UCRegle.xaml
     /// </summary>
-    public partial class UCDemarrage : UserControl
+    public partial class UCRegle : UserControl
     {
-        public UCDemarrage()
+        public UCRegle()
         {
             InitializeComponent();
-        }
-
-        private void ButDemarrer_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

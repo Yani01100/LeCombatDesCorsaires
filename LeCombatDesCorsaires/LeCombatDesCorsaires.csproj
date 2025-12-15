@@ -15,9 +15,12 @@
     <None Remove="Images\BateauMiawks.png" />
     <None Remove="Images\BateauRedForce.png" />
     <None Remove="Images\bateauSunny.png" />
+    <None Remove="Images\ButContinué.png" />
     <None Remove="Images\Ecran Acceuil.jpg" />
+    <None Remove="Images\Mer.jpg" />
     <None Remove="Images\rbCaraïbe.jpg" />
     <None Remove="Images\rbOnePiece.jpg" />
+    <None Remove="Images\Regledujeu.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,9 +30,12 @@
     <Resource Include="Images\BateauMiawks.png" />
     <Resource Include="Images\BateauRedForce.png" />
     <Resource Include="Images\bateauSunny.png" />
+    <Resource Include="Images\ButContinué.png" />
     <Resource Include="Images\Ecran Acceuil.jpg" />
+    <Resource Include="Images\Mer.jpg" />
     <Resource Include="Images\rbCaraïbe.jpg" />
     <Resource Include="Images\rbOnePiece.jpg" />
+    <Resource Include="Images\Regledujeu.jpg" />
   </ItemGroup>  
 	
   </Project>

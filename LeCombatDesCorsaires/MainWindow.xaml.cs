@@ -28,18 +28,33 @@ namespace LeCombatDesCorsaires
         }
         private void AfficheDemarrage()
         {
-            // crée et charge l'écran de démarrage
             UCDemarrage uc = new UCDemarrage();
-
             ZoneJeu.Content = uc;
-            uc.ButDemarrer.Click += AfficheUCMonde;
+
+            // C'EST ICI LA CLÉ : On branche le bouton directement sur le Jeu
+            uc.ButDemarrer.Click += AfficheRegle;
+        }
+
+        private void AfficheRegle(object sender, RoutedEventArgs e)
+        {
+            UCRegle uc = new UCRegle();
+            ZoneJeu.Content = uc;
+            uc.btnContinué.Click += AfficheJeu;
+        }
+
+        // Ajoutez cette fonction pour que la ligne du dessus fonctionne
+        private void AfficheJeu(object sender, RoutedEventArgs e)
+        {
+            UCJeu leJeu = new UCJeu();
+            ZoneJeu.Content = leJeu;
 
         }
+
+    
 
         private void AfficheUCMonde(object sender, RoutedEventArgs e)
         {
             UCMonde uc2 = new UCMonde();
-
             ZoneJeu.Content = uc2;
             uc2.butConfirmeChoix.Click += AfficheUCDisposition;
         }
