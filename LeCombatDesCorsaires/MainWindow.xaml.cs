@@ -30,8 +30,6 @@ namespace LeCombatDesCorsaires
         {
             UCDemarrage uc = new UCDemarrage();
             ZoneJeu.Content = uc;
-
-            // C'EST ICI LA CLÉ : On branche le bouton directement sur le Jeu
             uc.ButDemarrer.Click += AfficheRegle;
         }
 

@@ -9,14 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\BateauBoa.png" />
-    <None Remove="Images\BateauDragonCeleste.png" />
-    <None Remove="Images\BateauGarp.png" />
-    <None Remove="Images\BateauMiawks.png" />
-    <None Remove="Images\BateauRedForce.png" />
-    <None Remove="Images\bateauSunny.png" />
     <None Remove="Images\ButContinué.png" />
+    <None Remove="Images\DecorJeu.png" />
     <None Remove="Images\Ecran Acceuil.jpg" />
+    <None Remove="Images\Luffy1.png" />
+    <None Remove="Images\Luffy2-removebg-preview.png" />
+    <None Remove="Images\Luffy3-removebg-preview.png" />
+    <None Remove="Images\Luffy4-removebg-preview.png" />
+    <None Remove="Images\Luffy5-removebg-preview.png" />
     <None Remove="Images\Mer.jpg" />
     <None Remove="Images\rbCaraïbe.jpg" />
     <None Remove="Images\rbOnePiece.jpg" />
@@ -24,14 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\BateauBoa.png" />
-    <Resource Include="Images\BateauDragonCeleste.png" />
-    <Resource Include="Images\BateauGarp.png" />
-    <Resource Include="Images\BateauMiawks.png" />
-    <Resource Include="Images\BateauRedForce.png" />
-    <Resource Include="Images\bateauSunny.png" />
     <Resource Include="Images\ButContinué.png" />
+    <Resource Include="Images\DecorJeu.png" />
     <Resource Include="Images\Ecran Acceuil.jpg" />
+    <Resource Include="Images\Luffy1.png" />
+    <Resource Include="Images\Luffy2-removebg-preview.png" />
+    <Resource Include="Images\Luffy3-removebg-preview.png" />
+    <Resource Include="Images\Luffy4-removebg-preview.png" />
+    <Resource Include="Images\Luffy5-removebg-preview.png" />
     <Resource Include="Images\Mer.jpg" />
     <Resource Include="Images\rbCaraïbe.jpg" />
     <Resource Include="Images\rbOnePiece.jpg" />
