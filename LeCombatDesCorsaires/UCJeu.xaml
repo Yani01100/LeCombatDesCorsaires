@@ -17,8 +17,8 @@
             <Label x:Name="labScore" Content="Trésors : 0" FontSize="20" FontWeight="Bold" Foreground="White" Canvas.Left="10" Canvas.Top="10"/>
 
             <Image x:Name="imgBateau" 
-                Source="/Images/bateauSunny.png" Width="169" Height="86"
-               Canvas.Left="162" Canvas.Top="181" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Left" VerticalAlignment="Center">
+                Source="/Images/bateauSunny.png" Width="169" Height="81"
+               Canvas.Left="162" Canvas.Top="187" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="-1"/>
