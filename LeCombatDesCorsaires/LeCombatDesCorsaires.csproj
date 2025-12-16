@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\AfficheRegle.jpg" />
     <None Remove="Images\bateauSunny.png" />
     <None Remove="Images\ButContinué.png" />
     <None Remove="Images\DecorJeu.png" />
@@ -17,10 +18,10 @@
     <None Remove="Images\fruit.png" />
     <None Remove="Images\ImagePerdu.png" />
     <None Remove="Images\Mer.jpg" />
-    <None Remove="Images\Regledujeu.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\AfficheRegle.jpg" />
     <Resource Include="Images\bateauSunny.png" />
     <Resource Include="Images\ButContinué.png" />
     <Resource Include="Images\DecorJeu.png" />
@@ -29,7 +30,6 @@
     <Resource Include="Images\fruit.png" />
     <Resource Include="Images\ImagePerdu.png" />
     <Resource Include="Images\Mer.jpg" />
-    <Resource Include="Images\Regledujeu.jpg" />
   </ItemGroup>
 
   <ItemGroup>

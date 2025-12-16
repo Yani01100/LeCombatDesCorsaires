@@ -23,11 +23,11 @@ namespace LeCombatDesCorsaires
     {
 
         DispatcherTimer minuterie;
-        double vitesse = 5;       // Vitesse du bateau
-        int directionX = 0;       // 0=stop, 1=droite, -1=gauche
-        int directionY = 0;       // 0=stop, 1=bas, -1=haut
+        double vitesse = 5;
+        int directionX = 0;
+        int directionY = 0;
         int score = 0;
-        Random rand = new Random(); // Pour placer le trésor au hasard
+        Random rand = new Random();
 
         public UCJeu()
         {
@@ -37,7 +37,7 @@ namespace LeCombatDesCorsaires
 
         private void InitJeu()
         {
-           
+
             score = 0;
             vitesse = 5;
             labScore.Content = "Trésors : " + score;
@@ -61,7 +61,7 @@ namespace LeCombatDesCorsaires
             Window fenetre = Application.Current.MainWindow;
             if (fenetre != null) fenetre.KeyDown += GestionToucheAppuyee;
         }
-        
+
 
         private void MoteurDuJeu(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace LeCombatDesCorsaires
             double y = Canvas.GetTop(imgBateau);
             if (x < 0 || x + imgBateau.Width > zoneDeJeu.ActualWidth || y < 0 || y + imgBateau.Height > zoneDeJeu.ActualHeight)
             {
-                
+
                 minuterie.Stop();
                 MessageBox.Show("Game Over ! Le bateau a coulé.");
                 MessageBoxResult reponse = MessageBox.Show(
@@ -78,25 +78,24 @@ namespace LeCombatDesCorsaires
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 
-                
+
                 if (reponse == MessageBoxResult.Yes)
                 {
-                    InitJeu(); 
+                    InitJeu();
                 }
-                
+
                 else
                 {
                     Application.Current.Shutdown();
                 }
                 return;
             }
-            
-            
+
+
             Canvas.SetLeft(imgBateau, x + (directionX * vitesse));
             Canvas.SetTop(imgBateau, y + (directionY * vitesse));
 
-            //COLLISION AVEC LE TRESOR ---
-            // On crée deux rectangles invisibles autour du bateau et du trésor
+            //COLLISION AVEC LE TRESOR 
             Rect rectBateau = new Rect(Canvas.GetLeft(imgBateau), Canvas.GetTop(imgBateau), imgBateau.Width, imgBateau.Height);
             Rect rectTresor = new Rect(Canvas.GetLeft(tresor), Canvas.GetTop(tresor), tresor.Width, tresor.Height);
 
@@ -118,12 +117,12 @@ namespace LeCombatDesCorsaires
 
         private void MangerTresor()
         {
-           
+
             score++;
             labScore.Content = "Trésors : " + score;
             vitesse = vitesse + 1;
-            
-            
+
+
             double x = rand.Next(0, (int)(zoneDeJeu.ActualWidth - tresor.Width));
             double y = rand.Next(0, (int)(zoneDeJeu.ActualHeight - tresor.Height));
 
@@ -132,5 +131,5 @@ namespace LeCombatDesCorsaires
         }
     }
 }
-    
+
 
