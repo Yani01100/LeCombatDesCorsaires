@@ -68,7 +68,7 @@ namespace LeCombatDesCorsaires
             //DEPLACEMENT 
             double x = Canvas.GetLeft(imgBateau);
             double y = Canvas.GetTop(imgBateau);
-            if (x < 0 || x + imgBateau.Width > zoneDeJeu.ActualWidth || y < 0 || y + imgBateau.Height > zoneDeJeu.ActualHeight)
+            /*if (x < 0 || x + imgBateau.Width > zoneDeJeu.ActualWidth || y < 0 || y + imgBateau.Height > zoneDeJeu.ActualHeight)
             {
 
                 minuterie.Stop();
@@ -89,7 +89,7 @@ namespace LeCombatDesCorsaires
                     Application.Current.Shutdown();
                 }
                 return;
-            }
+            }*/
 
 
             Canvas.SetLeft(imgBateau, x + (directionX * vitesse));
@@ -109,10 +109,14 @@ namespace LeCombatDesCorsaires
         private void GestionToucheAppuyee(object sender, KeyEventArgs e)
         {
             // Logique type "Snake" : on appuie une fois, ça part dans la direction
-            if (e.Key == Key.Left) { directionX = -1; directionY = 0; }
-            if (e.Key == Key.Right) { directionX = 1; directionY = 0; }
-            if (e.Key == Key.Up) { directionX = 0; directionY = -1; }
-            if (e.Key == Key.Down) { directionX = 0; directionY = 1; }
+            if (e.Key == Key.Left) 
+            { directionX = -1; directionY = 0; }
+            if (e.Key == Key.Right) 
+            { directionX = 1; directionY = 0; }
+            if (e.Key == Key.Up) 
+            { directionX = 0; directionY = -1; }
+            if (e.Key == Key.Down) 
+            { directionX = 0; directionY = 1; }
         }
 
         private void MangerTresor()

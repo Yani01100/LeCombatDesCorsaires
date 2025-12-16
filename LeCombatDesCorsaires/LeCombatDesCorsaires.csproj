@@ -13,7 +13,6 @@
     <None Remove="Images\bateauSunny.png" />
     <None Remove="Images\ButContinué.png" />
     <None Remove="Images\DecorJeu.png" />
-    <None Remove="Images\DecorJeuRenverse.png" />
     <None Remove="Images\Ecran Acceuil.jpg" />
     <None Remove="Images\fruit.png" />
     <None Remove="Images\ImagePerdu.png" />
@@ -25,7 +24,6 @@
     <Resource Include="Images\bateauSunny.png" />
     <Resource Include="Images\ButContinué.png" />
     <Resource Include="Images\DecorJeu.png" />
-    <Resource Include="Images\DecorJeuRenverse.png" />
     <Resource Include="Images\Ecran Acceuil.jpg" />
     <Resource Include="Images\fruit.png" />
     <Resource Include="Images\ImagePerdu.png" />
