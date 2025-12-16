@@ -49,6 +49,16 @@ namespace LeCombatDesCorsaires
 
         }
 
+        private void AfficheDefaite()
+        {
+            UCRejouer perdu = new UCRejouer();
+            ZoneJeu.Content = perdu;
+            perdu.ButRejouer.Click += AfficheJeu;
+
+
+
+        }
+
 
         private static MediaPlayer musique;
 

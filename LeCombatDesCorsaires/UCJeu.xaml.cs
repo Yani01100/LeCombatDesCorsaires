@@ -75,8 +75,8 @@ namespace LeCombatDesCorsaires
                 MessageBox.Show("Game Over ! Le bateau a coulé.");
                 MessageBoxResult reponse = MessageBox.Show(
                 "Tu as touché le bord !\nVeux-tu rejouer ?","Game Over",
-        MessageBoxButton.YesNo,
-        MessageBoxImage.Question);
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
 
                 
                 if (reponse == MessageBoxResult.Yes)
