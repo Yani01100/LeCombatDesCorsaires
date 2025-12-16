@@ -11,6 +11,10 @@
   <ItemGroup>
     <None Remove="Images\AfficheRegle.jpg" />
     <None Remove="Images\bateauSunny.png" />
+    <None Remove="Images\bateauSunnyBas.png" />
+    <None Remove="Images\bateauSunnyDroite.png" />
+    <None Remove="Images\bateauSunnyGauche.png" />
+    <None Remove="Images\bateauSunnyHaut.png" />
     <None Remove="Images\ButContinué.png" />
     <None Remove="Images\DecorJeu.png" />
     <None Remove="Images\Ecran Acceuil.jpg" />
@@ -22,6 +26,10 @@
   <ItemGroup>
     <Resource Include="Images\AfficheRegle.jpg" />
     <Resource Include="Images\bateauSunny.png" />
+    <Resource Include="Images\bateauSunnyBas.png" />
+    <Resource Include="Images\bateauSunnyDroite.png" />
+    <Resource Include="Images\bateauSunnyGauche.png" />
+    <Resource Include="Images\bateauSunnyHaut.png" />
     <Resource Include="Images\ButContinué.png" />
     <Resource Include="Images\DecorJeu.png" />
     <Resource Include="Images\Ecran Acceuil.jpg" />

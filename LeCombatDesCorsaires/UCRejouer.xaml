@@ -8,12 +8,12 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Image Source="/Images/ImagePerdu.png" Stretch="Fill"/>
-        <Button x:Name="ButRejouer" Content="Rejouer" HorizontalAlignment="Center" Margin="-316,233,0,0" VerticalAlignment="Center" Height="51" Width="168">
+        <Button x:Name="ButRejouer" Content="Rejouer" HorizontalAlignment="Center" Margin="-316,233,0,0" VerticalAlignment="Center" Height="51" Width="168" Click="ButRejouer_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Images/ButRejouer.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="ButQuitter" Content="Quitter" HorizontalAlignment="Center" Margin="301,233,0,0" VerticalAlignment="Center" Height="51" Width="168">
+        <Button x:Name="ButQuitter" Content="Quitter" HorizontalAlignment="Center" Margin="301,233,0,0" VerticalAlignment="Center" Height="51" Width="168" Click="ButQuitter_Click">
             <Button.Background>
             <ImageBrush ImageSource="/Images/ButQuitter.png"/>
             </Button.Background>
