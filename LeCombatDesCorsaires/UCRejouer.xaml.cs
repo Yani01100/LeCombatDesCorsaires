@@ -24,5 +24,15 @@ namespace LeCombatDesCorsaires
         {
             InitializeComponent();
         }
+
+        private void ButRejouer_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ButQuitter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
