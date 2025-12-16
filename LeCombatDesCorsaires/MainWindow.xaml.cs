@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace LeCombatDesCorsaires
 {
@@ -19,12 +20,13 @@ namespace LeCombatDesCorsaires
     /// </summary>
     public partial class MainWindow : Window
     {
-        
 
+        private static DispatcherTimer minuterie;
         public MainWindow()
         {
             InitializeComponent();
             AfficheDemarrage();
+            //InitializeTimer();
         }
         private void AfficheDemarrage()
         {
@@ -40,7 +42,6 @@ namespace LeCombatDesCorsaires
             uc.btnContinué.Click += AfficheJeu;
         }
 
-        // Ajoutez cette fonction pour que la ligne du dessus fonctionne
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {
             UCJeu leJeu = new UCJeu();
@@ -48,18 +49,59 @@ namespace LeCombatDesCorsaires
 
         }
 
-    
 
-        private void AfficheUCMonde(object sender, RoutedEventArgs e)
+        /*private void InitializeTimer()
         {
-            UCMonde uc2 = new UCMonde();
-            ZoneJeu.Content = uc2;
-            uc2.butConfirmeChoix.Click += AfficheUCDisposition;
+            minuterie = new DispatcherTimer();
+            // configure l'intervalle du Timer :62 images par s
+            minuterie.Interval = TimeSpan.FromMilliseconds(16);
+            // associe l’appel de la méthode Jeu à la fin de la minuterie
+            minuterie.Tick += Jeu;
+            // lancement du timer
+            minuterie.Start();
         }
+        private int nb = 0;
+        private int nbTours = 0;
+        private void Jeu(object? sender, EventArgs e)
+        {
 
-        private void AfficheUCDisposition(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
+            Canvas.SetLeft(image, Canvas.GetLeft(imgFond1) - 2);
+            if (Canvas.GetLeft(imgFond1) + imgFond1.Width <= 0)
+                Canvas.SetLeft(imgFond1, canvasJeu.ActualWidth);
+
+            Canvas.SetLeft(imgFond2, Canvas.GetLeft(imgFond2) - 2);
+            if (Canvas.GetLeft(imgFond2) + imgFond2.Width <= 0)
+                Canvas.SetLeft(imgFond2, canvasJeu.ActualWidth);
+
+            Canvas.SetLeft(imgSol1, Canvas.GetLeft(imgSol1) - 5);
+            if (Canvas.GetLeft(imgSol1) + imgSol1.Width <= 0)
+                Canvas.SetLeft(imgSol1, canvasJeu.ActualWidth);
+
+            Canvas.SetLeft(imgSol2, Canvas.GetLeft(imgSol2) - 5);
+            if (Canvas.GetLeft(imgSol2) + imgSol2.Width <= 0)
+                Canvas.SetLeft(imgSol2, canvasJeu.ActualWidth);
+
+            nbTours++;
+            if (nbTours == 4)
+            {
+                nb++;
+                if (nb == persos.Length)
+                    nb = 0;
+                imgPerso.Source = persos[nb];
+                nbTours = 0;
+            }
         }
+        private static int pasSol = 8;
+        private static int pasFond = 2;
+        public static int vitesse = 2;*/
+
+
+
+
+
+
+
+
+
     }
 }

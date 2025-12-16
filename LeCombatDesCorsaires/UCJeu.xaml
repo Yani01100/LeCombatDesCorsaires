@@ -6,15 +6,34 @@
              xmlns:local="clr-namespace:LeCombatDesCorsaires"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
+
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Mer.jpg"/>
         </Grid.Background>
-        
-        <UniformGrid x:Name="GrilleEnnemiVisuel" Rows="5" Columns="5" 
-             Width="300" Height="300" 
-             HorizontalAlignment="Center" VerticalAlignment="Center">
-        </UniformGrid>
+
+        <Canvas x:Name="zoneDeJeu">
+
+            <Label x:Name="labScore" Content="Trésors : 0" FontSize="20" FontWeight="Bold" Foreground="White" Canvas.Left="10" Canvas.Top="10"/>
+
+            <Image x:Name="imgBateau" 
+                Source="/Images/bateauSunny.png" Width="169" Height="86"
+               Canvas.Left="162" Canvas.Top="181" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="15.776"/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <Image x:Name="tresor"
+                Source="/Images/fruit.png" 
+        Width="40" Height="40"
+       Canvas.Left="100" Canvas.Top="100"/>
+
+        </Canvas>
     </Grid>
 </UserControl>
