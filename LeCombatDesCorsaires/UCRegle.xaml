@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image Margin="0,0,10,0" Source="/Images/Regledujeu.jpg" Stretch="Fill" Height="440" VerticalAlignment="Top"/>
-        <Button x:Name="btnContinué" Content="" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="49" Width="150">
+        <Image Source="/Images/AfficheRegle.jpg" Stretch="Fill" />
+        <Button x:Name="btnContinué" Content="" Margin="298,375,298,0" VerticalAlignment="Top" Height="65" Width="204">
             <Button.Background>
                 <ImageBrush ImageSource="/Images/ButContinué.png"/>
             </Button.Background>
