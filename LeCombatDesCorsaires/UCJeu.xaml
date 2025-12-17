@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="/Images/Mer.jpg"/>
         </Grid.Background>
 
-        <Canvas x:Name="zoneDeJeu" KeyDown="zoneDeJeu_KeyDown" >
+        <Canvas x:Name="zoneDeJeu" KeyDown="zoneDeJeu_KeyDown" Margin="0,-51,0,30" >
 
             <Label x:Name="labScore" Content="Trésors : 0" FontSize="20" FontWeight="Bold" Foreground="White" Canvas.Left="10" Canvas.Top="67" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
