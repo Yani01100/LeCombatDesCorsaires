@@ -24,9 +24,12 @@ namespace LeCombatDesCorsaires
             InitializeComponent();
         }
 
-        private void ButRejouer_Click(object sender, RoutedEventArgs e)
+        public void ButRejouer_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.rejouer = true;
+            MainWindow.rejouer = false;
+            UCJeu ucJeu = new UCJeu();
+            ucJeu.Show();
+            this.Close();
         }
 
         private void ButQuitter_Click(object sender, RoutedEventArgs e)

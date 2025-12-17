@@ -35,6 +35,9 @@ namespace LeCombatDesCorsaires
         {
             InitializeComponent();
             InitJeu();
+
+            Canvas.SetLeft(imgBateau, 350);
+            Canvas.SetTop(imgBateau, 200);
         }
 
         private void InitJeu()
@@ -77,15 +80,6 @@ namespace LeCombatDesCorsaires
                 Perdu perdu = new Perdu();
                 rep = perdu.ShowDialog();
                 minuterie.Stop();
-
-
-
-                // ouvrir UCJeu.xaml lorsque bors img mer touchée
-
-
-
-
-                //Application.Current.Shutdown();
             }
            
             //COLLISION AVEC LE TRESOR 
@@ -136,6 +130,10 @@ namespace LeCombatDesCorsaires
             if (e.Key == Key.Down) { directionX = 0; directionY = 1; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyHaut.png")); imgBateau.Width = 95; imgBateau.Height = 160; }
         }
 
+        internal void Show()
+        {
+            
+        }
     }
 }
 
