@@ -12,17 +12,17 @@
             <ImageBrush ImageSource="/Images/Mer.jpg"/>
         </Grid.Background>
 
-        <Canvas x:Name="zoneDeJeu" Margin="0,-51,0,30">
+        <Canvas x:Name="zoneDeJeu" KeyDown="zoneDeJeu_KeyDown" >
 
             <Label x:Name="labScore" Content="Trésors : 0" FontSize="20" FontWeight="Bold" Foreground="White" Canvas.Left="10" Canvas.Top="67" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
             <Image x:Name="imgBateau" 
-                Source="/Images/bateauSunny.png" Width="169" Height="81"
-               Canvas.Left="162" Canvas.Top="187" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Center" VerticalAlignment="Top">
+               Source="/Images/bateauSunnyDroite.png" 
+               Canvas.Left="320" Canvas.Top="236" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Center" VerticalAlignment="Center" Height="95" Width="160">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="-1"/>
-                        <SkewTransform/>
+
                         <RotateTransform/>
                         <TranslateTransform Y="15.776"/>
                     </TransformGroup>
@@ -33,6 +33,7 @@
                 Source="/Images/fruit.png" 
         Width="40" Height="40"
        Canvas.Left="100" Canvas.Top="100"/>
+
 
         </Canvas>
     </Grid>
