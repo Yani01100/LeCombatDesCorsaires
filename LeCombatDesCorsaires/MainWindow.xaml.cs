@@ -22,7 +22,7 @@ namespace LeCombatDesCorsaires
     {
 
         private static DispatcherTimer minuterie;
-        public static bool rejouer=false;
+        public static bool rejouer=true;
         public MainWindow()
         {
             InitializeComponent();
@@ -45,21 +45,22 @@ namespace LeCombatDesCorsaires
 
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {
-            UCJeu leJeu = new UCJeu();
-            ZoneJeu.Content = leJeu;
-            if (rejouer == true)
+            
+            if (rejouer)
             {
-                AfficheDefaite();
+                rejouer = false;
+                UCJeu leJeu = new UCJeu();
+                ZoneJeu.Content = leJeu;
+
             }
 
         }
 
-        private void AfficheDefaite()
+        private void AfficheDefaite(object sender, RoutedEventArgs e)
         {
-            UCRejouer perdu = new UCRejouer();
+            Perdu perdu = new Perdu();
             ZoneJeu.Content = perdu;
             perdu.ButRejouer.Click += AfficheJeu;
-
         }
 
 

@@ -10,31 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LeCombatDesCorsaires
 {
     /// <summary>
-    /// Logique d'interaction pour UCRejouer.xaml
+    /// Logique d'interaction pour Perdu.xaml
     /// </summary>
-    public partial class UCRejouer : UserControl
+    public partial class Perdu : Window
     {
-        public UCRejouer()
+        public Perdu()
         {
             InitializeComponent();
         }
 
         private void ButRejouer_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainWindow.rejouer = true;
         }
 
         private void ButQuitter_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
-        // rien
-
     }
 }

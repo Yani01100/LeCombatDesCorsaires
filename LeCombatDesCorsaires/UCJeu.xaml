@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="LeCombatDesCorsaires.UCJeu"
+﻿<UserControl Name="ZoneJeu"
+             x:Class="LeCombatDesCorsaires.UCJeu"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,13 +19,13 @@
 
             <Image x:Name="imgBateau" 
                Source="/Images/bateauSunnyDroite.png" 
-               Canvas.Left="320" Canvas.Top="236" RenderTransformOrigin="0.492,0.659" HorizontalAlignment="Center" VerticalAlignment="Center" Height="95" Width="160">
+               Canvas.Left="320" Canvas.Top="236" RenderTransformOrigin="0.53,0.438" HorizontalAlignment="Center" VerticalAlignment="Center" Height="95" Width="160">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="-1"/>
-
+                        <SkewTransform/>
                         <RotateTransform/>
-                        <TranslateTransform Y="15.776"/>
+                        <TranslateTransform Y="57.766"/>
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
@@ -33,8 +34,10 @@
                 Source="/Images/fruit.png" 
         Width="40" Height="40"
        Canvas.Left="100" Canvas.Top="100"/>
+           
 
 
         </Canvas>
+        
     </Grid>
 </UserControl>

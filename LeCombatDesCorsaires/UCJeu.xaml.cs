@@ -21,8 +21,10 @@ namespace LeCombatDesCorsaires
     /// </summary>
     public partial class UCJeu : UserControl
     {
+        bool? repfenerte, Lose = false;
 
         DispatcherTimer minuterie;
+        bool? rep= false;
         double vitesse = 5;
         int directionX = 0;
         int directionY = 0;
@@ -68,26 +70,24 @@ namespace LeCombatDesCorsaires
             //DEPLACEMENT 
             double x = Canvas.GetLeft(imgBateau);
             double y = Canvas.GetTop(imgBateau);
-            /*if (x < 0 || x + imgBateau.Width > zoneDeJeu.ActualWidth || y < 0 || y + imgBateau.Height > zoneDeJeu.ActualHeight)
-            {
-                MainWindow.rejouer = true;
-                minuterie.Stop();
-                // ouvrir UCJeu.xaml lorsque bors img mer touchée
-                Window fenetre = Application.Current.MainWindow;
-
-
-                else
-                {
-                    Application.Current.Shutdown();
-                }
-                return;
-            }*/
-            }
-
-
             Canvas.SetLeft(imgBateau, x + (directionX * vitesse));
             Canvas.SetTop(imgBateau, y + (directionY * vitesse));
+            if (x < 0 || x + imgBateau.Width > zoneDeJeu.ActualWidth || y < 0 || y + imgBateau.Height > zoneDeJeu.ActualHeight)
+            {
+                Perdu perdu = new Perdu();
+                rep = perdu.ShowDialog();
+                minuterie.Stop();
 
+
+
+                // ouvrir UCJeu.xaml lorsque bors img mer touchée
+
+
+
+
+                //Application.Current.Shutdown();
+            }
+           
             //COLLISION AVEC LE TRESOR 
             Rect rectBateau = new Rect(Canvas.GetLeft(imgBateau), Canvas.GetTop(imgBateau), imgBateau.Width, imgBateau.Height);
             Rect rectTresor = new Rect(Canvas.GetLeft(tresor), Canvas.GetTop(tresor), tresor.Width, tresor.Height);
@@ -102,16 +102,16 @@ namespace LeCombatDesCorsaires
         private void GestionToucheAppuyee(object sender, KeyEventArgs e)
         {
             // Logique type "Snake" : on appuie une fois, ça part dans la direction
-            if (e.Key == Key.Left) 
+            if (e.Key == Key.Left)
             { directionX = -1; directionY = 0; }
-            if (e.Key == Key.Right) 
+            if (e.Key == Key.Right)
             { directionX = 1; directionY = 0; }
-            if (e.Key == Key.Up) 
+            if (e.Key == Key.Up)
             { directionX = 0; directionY = -1; }
-            if (e.Key == Key.Down) 
+            if (e.Key == Key.Down)
             { directionX = 0; directionY = 1; }
         }
-        
+
 
         private void MangerTresor()
         {
@@ -130,11 +130,12 @@ namespace LeCombatDesCorsaires
 
         private void zoneDeJeu_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Left) { directionX = -1; directionY = 0; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyGauche.png")); imgBateau.Width = 195; imgBateau.Height = 60; }
-            if (e.Key == Key.Right) { directionX = 1; directionY = 0; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyDroite.png")); imgBateau.Width = 195; imgBateau.Height = 60; }
-            if (e.Key == Key.Up) { directionX = 0; directionY = -1; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyBas.png")); imgBateau.Width = 60; imgBateau.Height = 195; }
-            if (e.Key == Key.Down) { directionX = 0; directionY = 1; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyHaut.png")); imgBateau.Width = 60; imgBateau.Height = 195; }
+            if (e.Key == Key.Left) { directionX = -1; directionY = 0; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyGauche.png")); imgBateau.Width = 160; imgBateau.Height = 95; }
+            if (e.Key == Key.Right) { directionX = 1; directionY = 0; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyDroite.png")); imgBateau.Width = 160; imgBateau.Height = 95; }
+            if (e.Key == Key.Up) { directionX = 0; directionY = -1; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyBas.png")); imgBateau.Width = 95; imgBateau.Height = 160; }
+            if (e.Key == Key.Down) { directionX = 0; directionY = 1; imgBateau.Source = new BitmapImage(new Uri("pack://application:,,,/Images/bateauSunnyHaut.png")); imgBateau.Width = 95; imgBateau.Height = 160; }
         }
+
     }
 }
 
