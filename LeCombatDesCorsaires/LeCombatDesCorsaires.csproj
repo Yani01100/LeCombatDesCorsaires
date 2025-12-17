@@ -18,11 +18,14 @@
     <None Remove="Images\ButContinué.png" />
     <None Remove="Images\ButQuitter.png" />
     <None Remove="Images\ButRejouer.png" />
-    <None Remove="Images\DecorJeu.png" />
     <None Remove="Images\Ecran Acceuil.jpg" />
     <None Remove="Images\fruit.png" />
     <None Remove="Images\ImagePerdu.png" />
     <None Remove="Images\Mer.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,7 +38,6 @@
     <Resource Include="Images\ButContinué.png" />
     <Resource Include="Images\ButQuitter.png" />
     <Resource Include="Images\ButRejouer.png" />
-    <Resource Include="Images\DecorJeu.png" />
     <Resource Include="Images\Ecran Acceuil.jpg" />
     <Resource Include="Images\fruit.png" />
     <Resource Include="Images\ImagePerdu.png" />

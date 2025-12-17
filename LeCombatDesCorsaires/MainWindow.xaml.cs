@@ -74,7 +74,7 @@ namespace LeCombatDesCorsaires
             musique = new MediaPlayer();
             musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Assets/MusiquePirate.mp3"));
             musique.MediaEnded += RelanceMusique;
-            musique.Volume = 0.5;
+            musique.Volume = 0;
             musique.Play();
         }
 
