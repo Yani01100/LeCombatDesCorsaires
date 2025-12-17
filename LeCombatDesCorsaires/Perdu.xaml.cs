@@ -26,10 +26,13 @@ namespace LeCombatDesCorsaires
 
         public void ButRejouer_Click(object sender, RoutedEventArgs e)
         {
+            //Code pour que cela réinitialise la partie
+            this.ButRejouer.IsEnabled = false;
             MainWindow.rejouer = false;
             UCJeu ucJeu = new UCJeu();
             ucJeu.Show();
             this.Close();
+
         }
 
         private void ButQuitter_Click(object sender, RoutedEventArgs e)

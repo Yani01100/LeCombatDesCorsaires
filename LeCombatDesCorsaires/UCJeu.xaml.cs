@@ -36,8 +36,7 @@ namespace LeCombatDesCorsaires
             InitializeComponent();
             InitJeu();
 
-            Canvas.SetLeft(imgBateau, 350);
-            Canvas.SetTop(imgBateau, 200);
+            
         }
 
         private void InitJeu()
@@ -134,6 +133,7 @@ namespace LeCombatDesCorsaires
         {
             
         }
+        
     }
 }
 

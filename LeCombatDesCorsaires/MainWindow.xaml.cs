@@ -64,8 +64,6 @@ namespace LeCombatDesCorsaires
 
             perdu.ButRejouer.Click += AfficheJeu;
 
-
-
         }
 
 
